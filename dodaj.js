@@ -41,40 +41,13 @@ function hamburger() {
   }
 }
 
-// PRIKAZ
+/* DODAJ FILM */
 
-const prikaz = document.getElementById('prikaz')
-const kriterijum = document.getElementById('kriterijum')
+const adresaSlike = document.getElementById('slika')
+const ram = document.getElementById('ram-slike')
 
-let filmovi = []
-let rezultati = []
+adresaSlike.addEventListener('input', function () {
+  ram.src = adresaSlike.value
 
-function render(niz) {
-  let sablon = ''
-  const limit = niz.length >= 8 ? 8 : niz.length
-  for (var i = 0; i < limit; i++) {
-    sablon += ` <div class="film">
-            <h3 class= "naslov">${niz[i].naziv} </h3> 
-            <p>• Godina : ${niz[i].godina}</p><hr>
-             <img src=${niz[i].slika} alt="" class="slike">
-                </div> `
-  }
-
-  prikaz.innerHTML = sablon
-}
-
-fetch('https://baza-filmova.herokuapp.com/filmovi/ ')
-  .then(res => res.json())
-  .then(data => {
-    filmovi = rezultati = data
-    render(rezultati)
-  })
-
-kriterijum.addEventListener('input', function () {
-  rezultati = filmovi.filter(film => film.naziv.includes(kriterijum.value))
-
-  render(rezultati)
 })
-
-
 

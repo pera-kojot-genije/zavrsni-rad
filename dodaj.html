@@ -15,98 +15,107 @@
 
 <body>
 
-    <HEADER>
+    <div class="sajt">
 
-        <div class="header">
+        <HEADER>
 
-            <div class="top-bar">
+            <div class="header">
 
-                <div class="log-burger">
+                <div class="top-bar">
 
-                    <a href="#" class="log-title">Prijavi se:</a>
+                    <div class="log-burger">
 
-                    <div id="login-box">
-                        <div class="login-fields">
-                            <span class="log-in"> Korisničko ime: </span>
-                            <input type="text" class="login-polje" id="username">
-                            <span class="log-in"> Lozinka: </span>
-                            <input type="password" class="login-polje" id="password">
-                            <button class="login-dugme" id="log-in">Prijavi se</button>
+                        <a href="#" class="log-title">Prijavi se:</a>
+
+                        <div id="login-box">
+                            <div class="login-fields">
+                                <span class="log-in"> Korisničko ime: </span>
+                                <input type="text" class="login-polje" id="username">
+                                <span class="log-in"> Lozinka: </span>
+                                <input type="password" class="login-polje" id="password">
+                                <button class="login-dugme" id="log-in">Prijavi se</button>
+                            </div>
                         </div>
+
+                        <a href="javascript:void(0);" class="icon" onclick="loginBox()">
+                            <i class="fa fa-user"></i>
+                        </a>
+
+                    </div>
+                    <div class="tema">
+                        <div class="izbor-teme-tekst">Izaberi temu:</div>
+                        <div class="zamena-kolorita">
+                            <div><button id="tamno-dugme" onclick="izborTeme('dark.css')">Tamna</button></div>
+                            <div><button id="svetlo-dugme" onclick="izborTeme('light.css')">Svetla</button></div>
+                        </div>
+
                     </div>
 
-                    <a href="javascript:void(0);" class="icon" onclick="loginBox()">
-                        <i class="fa fa-user"></i>
-                    </a>
+                    <div>
+                        <div id="logotip"><img src="media/logo.png"></div>
 
-                </div>
-                <div class="tema">
-                    <div class="izbor-teme-tekst">Izaberi temu:</div>
-                    <div class="zamena-kolorita">
-                        <div><button id="tamno-dugme" onclick="izborTeme('dark.css')">Tamna</button></div>
-                        <div><button id="svetlo-dugme" onclick="izborTeme('light.css')">Svetla</button></div>
                     </div>
 
                 </div>
 
-                <div>
-                    <div id="logotip"><img src="media/logo.png"></div>
+            </div>
 
+
+
+        </HEADER>
+
+        <NAVBAR>
+
+            <div class="topnav">
+                <a href="#" class="nav-title">Sadržaj</a>
+
+                <div id="myLinks">
+                    <a href="index.html">Dobro došli</a>
+                    <a href="pretraga.html">Pretraga</a>
+                    <a href="dodaj.html">Dodaj film</a>
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+            <div class="linija1"></div>
+
+        </NAVBAR>
+
+        <MAIN>
+
+            <div class="nosac-forme">
+
+                <div class="nosac-slike"><img src="media/lele.jpg" alt="image" id="ram-slike"></div>
+
+                <div class="nosac-polja">
+                    <form action="https://baza-filmova.herokuapp.com/dodaj-film/" method="POST">
+                        <input id="naziv" name="naziv" type="text" placeholder="Ime filma">
+                        <input id="godina" name="godina" type="text" placeholder="Godina proizvodnje">
+                        <input id="slika" name="slika" type="text" placeholder="URL slike">
+                        <input id="df-submit" type="submit" value="Dodaj">
+                    </form>
                 </div>
 
             </div>
 
-        </div>
+        </main>
 
-        </div>
+        </MAIN>
 
-    </HEADER>
+        <div class="linija2"></div>
 
-    <NAVBAR>
+        <FOOTER>
 
-        <div class="topnav">
-            <a href="#" class="nav-title">Sadržaj</a>
+            <div>Ivan Antić - Pretraga filmova 2019.</div>
 
-            <div id="myLinks">
-                <a href="index.html">Dobro došli</a>
-                <a href="pretraga.html">Pretraga</a>
-                <a href="dodaj.html">Dodaj film</a>
-            </div>
+        </FOOTER>
 
-            <a href="javascript:void(0);" class="icon" onclick="hamburger()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+    </div>
 
-    </NAVBAR>
-
-    <MAIN>
-
-        <div class="nosac-forme">
-            <div class="nosac-slike"><img src="media/lele.jpg" alt="image" id="nosac-slike"></div>
-            <div class="nosac-polja">
-                <form action="https://baza-filmova.herokuapp.com/dodaj-film/" method="POST">
-                    <input id="ime" name="naziv" type="text" placeholder="Ime filma">
-                    <input id="godina" name="godina" type="text" placeholder="Godina proizvodnje">
-                    <input id="url-slike" name="slika" type="text" placeholder="URL slike">
-                    <input id="df-submit" type="submit" value="Dodaj">
-                </form>
-            </div>
-        </div>
-
-        </div>
-
-    </MAIN>
-
-    <div class="footer-granica"></div>
-
-    <FOOTER>
-
-        <div>Ivan Antić - Pretraga filmova 2019.</div>
-
-    </FOOTER>
-
-    <script src="main.js" charset="utf-8"></script>
+    <script src="dodaj.js" charset="utf-8"></script>
 
 </body>
 
