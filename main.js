@@ -85,9 +85,9 @@ kriterijum.addEventListener('input', function () {
 /* DODAJ FILM */
 
 const slika = document.getElementById ('url-slike')
-const plhdr = document.getElementById ('plchdr')
+const plhdr = document.getElementById ('nosac-slike')
 
 slika.addEventListener('input', function() {
     plhdr.src = slika.value
     
-  })
+})
