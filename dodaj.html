@@ -17,14 +17,13 @@
 
     <HEADER>
 
-        <div id="bgimg"><img src="media/freel2.png"></div>
-
         <div class="header">
-            <div>
+
+            <div class="top-bar">
 
                 <div class="log-burger">
 
-                    <a href="#" class="active">Prijavi se →</a>
+                    <a href="#" class="log-title">Prijavi se:</a>
 
                     <div id="login-box">
                         <div class="login-fields">
@@ -41,11 +40,24 @@
                     </a>
 
                 </div>
-
-                <div id="logotip"><img src="media/logo.png"></div>
+                <div class="tema">
+                    <div class="izbor-teme-tekst">Izaberi temu:</div>
+                    <div class="zamena-kolorita">
+                        <div><button id="tamno-dugme" onclick="izborTeme('dark.css')">Tamna</button></div>
+                        <div><button id="svetlo-dugme" onclick="izborTeme('light.css')">Svetla</button></div>
+                    </div>
 
                 </div>
+
+                <div>
+                    <div id="logotip"><img src="media/logo.png"></div>
+
+                </div>
+
             </div>
+
+        </div>
+
         </div>
 
     </HEADER>
@@ -53,7 +65,7 @@
     <NAVBAR>
 
         <div class="topnav">
-            <a href="#" class="active">Sadržaj</a>
+            <a href="#" class="nav-title">Sadržaj</a>
 
             <div id="myLinks">
                 <a href="index.html">Dobro došli</a>
