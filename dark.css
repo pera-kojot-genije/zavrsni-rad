@@ -188,19 +188,22 @@ img {
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
-  margin: 40px 40px;
+  margin: 40px auto;
+  min-width: 200px;
 }
 
 .pretrazivac {
   display: grid;
   grid-template-columns: auto auto;
+  height: 32px;
+  min-width: 200px;
 }
 
 #kriterijum {
   background-color: rgba(18, 19, 21, 0.7);
   color: #dddddd;
   border: 0.5px solid #27292b;
-  height: 32px;
+  min-width: 168px;
 }
 
 .input-polje {
@@ -214,27 +217,22 @@ img {
   height: 32px;
   border: 1px solid #c44611;
   cursor: pointer;
-}
-
-#input-dugme:hover {
-  background-color: #141518;
-  color: #dddddd;
+  right: 0px;
 }
 
 /* SORTIRANJE ---------------------------------------------------------------------- */
 
-.sortiranje1 {
+.sortiranje {
+  width: 100%;
   margin-top: 20px;
-}
-
-.sortiranje2 {
-  margin-top: 10px;
+  border: 0.5px solid #27292b;
+  padding: 10px;
 }
 
 #sort1 {
   display: grid;
   grid-template-columns: auto 38px 32px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-top: 10px;
 }
 
@@ -246,9 +244,9 @@ img {
 #sort1>button,
 #sort2>button {
   background-color: #141518;
+  border: 0.5px solid #27292b;
   color: #ddd;
   margin: -10px 0px 0px 0px;
-  border: 0px;
   width: 32px;
   height: 32px;
 }
@@ -270,7 +268,6 @@ img {
   padding: 14px 16px;
   height: 44px;
   text-decoration: none;
-  font-size: 14px;
   display: block;
 }
 
@@ -383,7 +380,7 @@ img {
   color: #dddddd;
   width: 100%;
   margin: 20px 0;
-  padding: 20px 40px;
+  padding: 16px 40px;
   text-transform: uppercase;
   border: 0px solid #707175;
   cursor: pointer;
@@ -548,6 +545,10 @@ footer>div {
     padding: 20px;
   }
 
+  .input-polje {
+    min-width: 180px;
+  }
+
 }
 
 @media only screen and (min-width: 480px) {
@@ -555,7 +556,7 @@ footer>div {
   .input-polje {
     min-width: 280px;
   }
-  
+
 }
 
 @media only screen and (min-width: 1280px) {
@@ -569,7 +570,7 @@ footer>div {
   }
 
   .top-bar {
-    position:absolute;
+    position: absolute;
     background-color: #141518;
     width: 100%;
     height: 35px;
@@ -683,25 +684,35 @@ footer>div {
   }
 
   #input-dugme:hover {
-    background-color: #1e2023;
-    border: 1px solid #1e2023;
+    background-color: #61656d;
+    border: 1px solid #61656d;
   }
 
   /* SORTIRANJE ---------------------------------------------------------------------- */
 
-  .sortiranje1 {
-    margin-top: 0px;
+  .sortiranje {
+    display: grid;
+    grid-template-columns: auto auto;
     margin-left: 40px;
+    margin-top: 0px;
+    height: 34px;
+    border: none;
   }
 
-  .sortiranje2 {
-    margin-top: 10px;
+  #sort1 {
+    display: grid;
+    grid-template-columns: auto 38px 32px;
+    padding-top: 0px;
+  }
+
+  #sort2 {
+    display: grid;
+    grid-template-columns: auto 38px 32px;
     margin-left: 40px;
   }
 
   #sort1>button,
   #sort2>button {
-    margin: -10px 0px 0px 10px;
     cursor: pointer;
   }
 
@@ -709,8 +720,6 @@ footer>div {
   #sort2>button:hover {
     background-color: #c44611;
   }
-
-
 
   /* NAV BURGER ----------------------------------------------------------------------- */
 
