@@ -53,7 +53,7 @@ function render(niz) {
   let sablon = ''
   const limit = niz.length >= 8 ? 8 : niz.length
   for (var i = 0; i < limit; i++) {
-    sablon += ` <div class="film">
+    sablon += ` <div class="solo-film">
             <h3 class= "naslov">${niz[i].naziv} </h3> 
             <p>• Godina : ${niz[i].godina}</p><hr>
              <img src=${niz[i].slika} alt="" class="slike">
