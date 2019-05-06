@@ -3,17 +3,18 @@
 * {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
+  color: #ddd;
 }
 
 .sajt {
   max-width: 1600px;
-  background-color: rgba(118, 126, 150, 0.5);
+  background-color: rgba(20, 21, 24, 0.5);
   margin: 0 auto;
 }
 
 body {
   background-color: #1e2023;
-  background-image: url("media/tile.jpg");
+  background-image: url("media/tile-l.jpg");
   color: #dddddd;
   margin: 0px;
   padding: 0px;
@@ -36,7 +37,7 @@ input:focus {
 }
 
 hr {
-  border: 0.5px solid #34373c;
+  border: 0.5px solid #797979;
   margin-bottom: 20px;
 }
 
@@ -309,7 +310,7 @@ img {
 /* PRETRAGA -------------------------------------------------------------------------- */
 
 .film-omot {
-  background-color: rgba(18, 19, 21, 0.8);
+  background-color: rgba(70, 73, 76, 0.5);
   margin-top: 40px;
 }
 
@@ -318,9 +319,10 @@ img {
   padding: 40px;
 }
 
-.film {
+.solo-film {
+  width: 100%;
   max-width: 400px;
-  border: 1px solid #34373c;
+  border: 1px solid #797979;
   position: relative;
   padding: 20px;
   margin: 0 auto;
@@ -329,7 +331,7 @@ img {
 #prikaz {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: 40px;
   grid-auto-flow: dense;
 }
@@ -535,9 +537,11 @@ footer>div {
   opacity: 0.8;
 }
 
+
+
 /* SCREENS -------------SCREENS---------------SCREENS---------------------------------------------- */
 
-/* ----------------------333---------------333-----------------333---------------333 */
+
 
 @media only screen and (min-width: 320px) {
 
@@ -551,6 +555,12 @@ footer>div {
 
 }
 
+
+
+/* SCREENS -------------SCREENS---------------SCREENS---------------------------------------------- */
+
+
+
 @media only screen and (min-width: 480px) {
 
   .input-polje {
@@ -559,7 +569,15 @@ footer>div {
 
 }
 
+
+
+/* SCREENS -------------SCREENS---------------SCREENS---------------------------------------------- */
+
+
+
 @media only screen and (min-width: 1280px) {
+
+  /* HEADER ---------------------------------------------------------------------------*/
 
   .header {
     position: relative;
@@ -569,12 +587,16 @@ footer>div {
     padding: 0px 40px;
   }
 
+  /* TOP BAR ------------------------------------------------------------------------- */
+
   .top-bar {
     position: absolute;
     background-color: #141518;
     width: 100%;
     height: 35px;
   }
+
+  /* ZAMENA TEME ------------------------------------------------------------------------- */
 
   .tema {
     display: grid;
@@ -610,8 +632,9 @@ footer>div {
     color: #ddd;
     border: 0px;
     margin: 4px 0 0 4px;
-    ;
   }
+
+  /* LOGIN BOX ----------------------------------------------------------------------------*/
 
   .log-burger {
     overflow: hidden;
@@ -669,6 +692,8 @@ footer>div {
     max-width: 360px;
   }
 
+  /* FILTERI ---------------------------------------------------------------------- */
+
   .filteri {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -721,11 +746,11 @@ footer>div {
     background-color: #c44611;
   }
 
-  /* NAV BURGER ----------------------------------------------------------------------- */
+  /* NAVIGACIJA ----------------------------------------------------------------------- */
 
   .topnav {
     overflow: hidden;
-    background-color: #141518;
+    background-color: #222427;
     position: relative;
     height: 44px;
   }
@@ -766,8 +791,14 @@ footer>div {
     display: none;
   }
 
+  /* PRETRAGA -------------------------------------------------------------------------- */
+
   .film-omot {
     margin: 40px;
+  }
+
+  #prikaz {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   .naslov {
@@ -776,24 +807,37 @@ footer>div {
     padding: 10px;
   }
 
-  .nosac-forme {
-    grid-template-columns: auto auto;
-    max-width: 60%;
-  }
+  /* DODAJ FILM -------------------------------------------------------------------------- */
 
-  .nosac-polja {
-    padding: 40px 40px 40px 20px;
+  .nosac-forme {
+    display: grid;
+    grid-template-columns: 340px 480px;
+    max-width: 840px;
   }
 
   .nosac-slike {
     margin: 40px 20px 40px 40px;
     padding: 20px;
+    width: 280px;
+  }
+
+  .nosac-polja {
+    padding: 40px 40px 40px 20px;
+    margin-left: 0px;
+    width: 480px;
+  }
+
+  .dodavanje {
+    width: 440px;
   }
 
   #naziv,
-  #godina,
-  #url-slike {
+  #godina {
     margin-bottom: 20px;
+  }
+
+  #slika {
+    margin-bottom: 10px;
   }
 
 }
