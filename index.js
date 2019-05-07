@@ -1,5 +1,10 @@
 let eid = id => document.getElementById(id)
 
+const username = eid('username')
+const password = eid('password')
+
+const potpis = eid('login-box')
+
 // IZBOR TEME
 
 function izborTeme(tema) {
