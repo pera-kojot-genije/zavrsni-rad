@@ -1,4 +1,9 @@
-let eid = id => document.getElementById(id)
+const eid = selektor => document.getElementById(selektor)
+
+const username = eid('username')
+const password = eid('password')
+
+const potpis = eid('login-box')
 
 // IZBOR TEME
 
@@ -9,25 +14,19 @@ function izborTeme(tema) {
 /* PRIJAVI SE */
 
 function loginBox() {
-  const lgn = document.getElementById("login-box");
+  const lgn = eid("login-box");
   if (lgn.style.display === "block") {
     lgn.style.display = "none";
+
   } else {
     lgn.style.display = "block";
   }
 }
 
-const logIn = eid('login-box')
-
-logIn.addEventListener('click', function () {
+potpis.addEventListener('click', function () {
   if (username.value == "admin" && password.value == "admin") {
-    const iks = document.getElementsByClassName('iks')
-    console.log(iks);
-    for (let i = 0; i < iks.length; i++) {
-      iks[i].style.display = "block"
-    }
+    console.log("Podaci su ispravni");
   }
-
 })
 
 // /* NAVIGACIJA */
