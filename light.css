@@ -8,7 +8,7 @@
 
 .sajt {
   max-width: 1600px;
-  background-color: rgba(20, 21, 24, 0.5);
+  background-color: rgba(117, 120, 125, 0.64);
   margin: 0 auto;
 }
 
@@ -226,7 +226,7 @@ img {
 .sortiranje {
   width: 100%;
   margin-top: 20px;
-  border: 0.5px solid #27292b;
+  border: 0.5px solid #828282;
   padding: 10px;
 }
 
@@ -256,7 +256,7 @@ img {
 
 .topnav {
   overflow: hidden;
-  background-color: #1e2023;
+  background-color: #222427;
   position: relative;
 }
 
@@ -278,7 +278,7 @@ img {
 }
 
 .topnav a.icon {
-  background: #1e2023;
+  background: #383b40;
   display: block;
   position: absolute;
   right: 0;
@@ -291,7 +291,7 @@ img {
 }
 
 .nav-title {
-  background-color: #141518;
+  background-color: #222427;
   color: white;
 }
 
@@ -310,7 +310,7 @@ img {
 /* PRETRAGA -------------------------------------------------------------------------- */
 
 .film-omot {
-  background-color: rgba(70, 73, 76, 0.5);
+  background-color: rgba(64, 67, 72, 0.74);
   margin-top: 40px;
 }
 
