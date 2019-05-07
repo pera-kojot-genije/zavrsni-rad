@@ -14,10 +14,7 @@ const naslovUp = eid('naslov-gore')
 const naslovDown = eid('naslov-dole')
 
 let filmovi = []
-
 let rezultati = []
-let rezultatiTemp = []
-let rezultatiZaPrikaz = []
 
 let sablon = ''
 
